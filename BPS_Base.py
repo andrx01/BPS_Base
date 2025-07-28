@@ -3,7 +3,7 @@ import pandas as pd
 import zipfile
 
 st.set_page_config(
-    page_title="Dashboard BPS Mundimed",
+    page_title="Dashboard BPS - Compras Publicas",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -47,7 +47,7 @@ with st.spinner("🔄 Carregando sistema e banco de dados, por favor aguarde..."
 
     df_bps[col_ano] = df_bps[col_ano].astype(str).str.replace(".0", "", regex=False).fillna("Não informado")
 
-    st.title("🩺 Dashboard BPS Mundimed - Com Prévia de Produtos")
+    st.title("🩺 Dashboard BPS - Compras Publicas")
     st.info(f"Arquivo carregado: **{nome_arquivo}**")
 
     resetar = st.button("🔄 Resetar Filtros")
